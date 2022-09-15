@@ -6,22 +6,9 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Test class
- *
- * @author Alston Alwinappar
- * @since 04/29/22
- */
 public class Main {
 
     public static void main(String[] args) {
-//                Deliverable 2 (Implementation)
-//For this deliverable, your repository should contain the following files:
-//• Completed UML Class Diagrams for all classes and interfaces with their relationship
-//• The implementation of all required features (the source code)
-//• A snapshot of output demonstrating the functionality of the application whether correct
-//or incorrect, complete, or incomplete.
-//• Graphic elements to display and input data
 
 // Staff
         ArrayList<Staff> staffs = new ArrayList<>();
