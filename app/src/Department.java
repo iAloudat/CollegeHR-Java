@@ -1,11 +1,6 @@
 import java.util.ArrayList;
 
-/**
- * Department class
- *
- * @author Alston Alwinappar
- * @since 04/29/22
- */
+
 public class Department {
 
     private String deptName;

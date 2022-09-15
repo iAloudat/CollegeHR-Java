@@ -1,11 +1,5 @@
 import java.util.Objects;
 
-/**
- * Teacher class
- *
- * @author Alston Alwinappar
- * @since 04/29/22
- */
 public class Teacher extends Person implements Payroll {
 
     private String specialty;

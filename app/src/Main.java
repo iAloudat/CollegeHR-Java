@@ -12,7 +12,7 @@ public class Main {
 
 // Staff
         ArrayList<Staff> staffs = new ArrayList<>();
-        staffs = readStaffData("ListOfStaffs.txt");//readStaffData method returns an arraylist
+        staffs = readStaffData("app/data/ListOfStaffs.txt");//readStaffData method returns an arraylist
 
         Staff s2 = new Staff("Chloe", "Bourgeois", "female", 26, 06, "Cook", 15);
 
@@ -23,7 +23,7 @@ public class Main {
 //            System.out.println(s);
 //        }
 // this method creates output file with new staffs included
-//        writeStaffFile("ListOfStaffs.txt", staffs);// this method creates output file with new staffs included
+//        writeStaffFile("app/data/ListOfStaffs.txt", staffs);// this method creates output file with new staffs included
 //        
 // the codes below test codes in staff method
 //        System.out.printf("%.2f\n", staffs.get(0).ComputePayRoll());
@@ -34,7 +34,7 @@ public class Main {
 // Teacher
         ArrayList<Teacher> teachers = new ArrayList<>();
         //readTeacherData method returns an arraylist
-        teachers = readTeacherData("ListOfTeachers.txt");
+        teachers = readTeacherData("app/data/ListOfTeachers.txt");
 
         Teacher t2 = new Teacher("Mari", "Agreste", "Female", 25, 7, "Poetry", "Bachelor",
                 3, false);
@@ -48,7 +48,7 @@ public class Main {
 //        }
 
 // this method creates output file with new teachers included
-        writeTeacherFile("ListOfTeachers.txt", teachers);
+        writeTeacherFile("app/data/ListOfTeachers.txt", teachers);
         // the codes below test codes in teacher method
 //        System.out.printf("%.2f\n", teachers.get(0).ComputePayRoll());
         System.out.println("");
@@ -104,7 +104,7 @@ public class Main {
 
         try ( Scanner input = new Scanner(listOfStaffs)) {
 //the line below creates an output file of all the staffs(including those added additionally)
-            File newListOfStaffs = new File("NewListOfStaffs.txt");
+            File newListOfStaffs = new File("app/data/NewListOfStaffs.txt");
 
             FileWriter fw = new FileWriter(newListOfStaffs);
 
@@ -139,7 +139,7 @@ public class Main {
 
         try ( Scanner input = new Scanner(listOfTeachers)) {
 //the line below creates an output file of all the teachers(including those added additionally)
-            File newListOfTeachers = new File("NewListOfTeachers.txt");
+            File newListOfTeachers = new File("app/data/NewListOfTeachers.txt");
 
             FileWriter fw = new FileWriter(newListOfTeachers);
 
@@ -248,7 +248,7 @@ public class Main {
                 String specialty = teacherInfo[5];
                 String degree = teacherInfo[6];
                 int exp;
-                boolean dean = Boolean.parseBoolean(teacherInfo[8]);
+                boolean dean = Boolean.parseBoolean(teacherInfo[6]);
                 try {
                     age = Integer.parseInt(teacherInfo[3]);
                 } catch (NumberFormatException e) {
