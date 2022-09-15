@@ -1,3 +1,5 @@
+
+
 public class PartTime extends Teacher implements Payroll {
 
     private int workload;// its hoursWorked

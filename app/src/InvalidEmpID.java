@@ -6,5 +6,4 @@ public class InvalidEmpID extends RuntimeException {
     public InvalidEmpID(String message) {
         super(message);
     }
-
 }
