@@ -4,6 +4,9 @@ Desktop.ini
 .AppleDouble
 .LSOverride
 .settings
+.classpath
+.project
+bin
 
 # Thumbnail cache files
 ._*
