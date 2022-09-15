@@ -61,7 +61,7 @@ In your model, you will have department objects (representing departments). A de
 4. Document your code using JavaDoc
 5. Create a Test class using JUnit to test the controller methods. All tests should pass.
 
-# A Few Notes
+# Notes
 
 1. The pseudocode that you are asked to do could be in a Word document format, only for the methods that are doing some calculations. You don't need to write it for getters/setters, toString(), equals(), etc.
 
