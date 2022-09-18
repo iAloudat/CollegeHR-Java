@@ -1,3 +1,5 @@
+
+
 public class FullTime extends Teacher {
 
     private int workload;

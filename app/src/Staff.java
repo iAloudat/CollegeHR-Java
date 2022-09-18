@@ -1,3 +1,5 @@
+
+
 public class Staff extends Person implements Payroll {
 
     private String duty;
