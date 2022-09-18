@@ -1,5 +1,10 @@
-import org.junit.Test;
-import static org.junit.Assert.*;
+package com.prog2.main;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.com.prog2.main.Staff;
+
+import org.junit.jupiter.api.Test;
 
 public class StaffTest {
 
@@ -72,8 +77,9 @@ public class StaffTest {
         System.out.println("ComputePayRoll");
         Staff instance = new Staff("Lloyd", "Garm", "Male", 17, 01, "janitor", 32);
         double expResult = 1536.0;
-        double result = instance.ComputePayRoll();
+        double result = instance.computePayRoll();
         assertEquals(expResult, result, 0.0);
     }
 
 }
+

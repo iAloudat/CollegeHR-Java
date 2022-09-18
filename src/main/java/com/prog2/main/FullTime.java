@@ -1,12 +1,11 @@
-
+package java.com.prog2.main;
 
 public class FullTime extends Teacher {
 
     private int workload;
 
-    public FullTime(int workload, String fname, String lname, String gender, int age,
-            int empID, String specialty, String degree, int exp, boolean dean) {
-        super(fname, lname, gender, age, empID, specialty, degree, exp, dean);
+    public FullTime(int workload, String firstName, String lastName, String gender, int age, int employeeID, String specialty, String degree, boolean dean) {
+        super(firstName, lastName, gender, age, employeeID, specialty, degree, dean);
         this.workload = workload;
     }
 
@@ -25,3 +24,4 @@ public class FullTime extends Teacher {
     }
 
 }
+

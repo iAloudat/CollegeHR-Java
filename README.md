@@ -1,4 +1,6 @@
-# Java2Project
+# Programming 2 - Project
+
+This template repository is the starter project for Programming 2 Project. Written in Java, and tested with Gradle/JUnit.
 
 ### Project Description
 
@@ -6,7 +8,7 @@
 
 This is an individual project that has three parts: an analysis and design document, the project code, and a test suite.
 
-# Project Requirement
+**Project Requirement**
 
 • Pseudocode for the main methods  
 • Completed UML Class Diagrams for all classes and interfaces with their relationship  
@@ -18,7 +20,7 @@ This is an individual project that has three parts: an analysis and design docum
 • The output should be clear and well-presented containing messages to reflect the code testing.  
 • A snapshot showing which tests have passed, included in the README on GitHub.
 
-# Project Objectives
+**Project Objectives**
 
 Developing a Graphical User Interface (GUI) in programming is paramount to being successful in the business industry. This project incorporates GUI techniques with other concepts that you have learned in this class. You will:
 
@@ -28,13 +30,13 @@ Developing a Graphical User Interface (GUI) in programming is paramount to being
 4. Test your classes
 5. Create documentation for end users
 
-# Project Description
+**Project Description**
 
 A tiny college has asked you to be a part of their team because they need a programmer, analyst, and designer to help them in implementing a model of a human resources management system.
 
 In your model, you will have department objects (representing departments). A department contains lists of teachers (either part-time or full-time teachers) and lists of staff; each of which belongs exclusively to one department. A department has a dean, who should be a teacher of that department.
 
-# Implementation Details
+**Implementation Details**
 
 1. Implement an abstract class Person that includes at least five shared fields and contains at least one abstract method of your choice (for example to define a person's category (teacher or staff)).
 2. Extend class Person with concrete classes, and override the toString() and equals() methods of each class.
@@ -53,7 +55,7 @@ In your model, you will have department objects (representing departments). A de
 11. Customized exception handling for the cases above must be implemented.
 12. Test sets should be generated for testing the effectiveness of each method in your model.
 
-# Design Requirements
+**Design Requirements**
 
 1. A clear and precise GUI should be designed for input and output.
 2. Create all the classes
@@ -61,7 +63,7 @@ In your model, you will have department objects (representing departments). A de
 4. Document your code using JavaDoc
 5. Create a Test class using JUnit to test the controller methods. All tests should pass.
 
-# Notes
+**A Few Notes**
 
 1. The pseudocode that you are asked to do could be in a Word document format, only for the methods that are doing some calculations. You don't need to write it for getters/setters, toString(), equals(), etc.
 
