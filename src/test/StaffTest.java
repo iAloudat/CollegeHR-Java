@@ -1,8 +1,6 @@
-package com.prog2.main;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.com.prog2.main.Staff;
 
 import org.junit.jupiter.api.Test;
 

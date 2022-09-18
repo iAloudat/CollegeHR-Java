@@ -1,4 +1,4 @@
-package java.com.prog2.main;
+
 import java.util.ArrayList;
 
 public class Department {

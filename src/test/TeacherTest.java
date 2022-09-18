@@ -1,8 +1,6 @@
-package com.prog2.main;
+
 
 import static org.junit.Assert.assertEquals;
-
-import java.com.prog2.main.Teacher;
 
 import org.junit.Test;
 

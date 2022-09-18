@@ -1,4 +1,4 @@
-package java.com.prog2.main;
+
 
 public abstract class Person {
 

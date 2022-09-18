@@ -1,4 +1,4 @@
-package java.com.prog2.main;
+
 
 import java.io.File;
 import java.io.FileWriter;
@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  */
 
-public class Main { 
+public class Main {
 
 	/**
 	 * Write your test code below in the main.
