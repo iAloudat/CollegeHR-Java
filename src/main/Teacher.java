@@ -1,8 +1,7 @@
 
-
 public class Teacher extends Person {
 
-    private String specialty;
+	protected String specialty;
     protected String degree;
 
     public Teacher(String firstName, String lastName, String gender, int employeeId, int age, int departmentId, String specialty, String degree) {
@@ -24,19 +23,18 @@ public class Teacher extends Person {
         this.degree = degree;
     }
     
-    // override to the abstract class to define the category
+    // Override to the abstract class to define the category
     @Override
     public void category() {
-        System.out.println(firstName + lastName + " is a teacher.");
+        System.out.println(firstName + lastName + ": is a Teacher.");
     }
-    
     @Override
     public String toString() {
         return (super.toString() 
              + "Specialty: " + specialty + "\n"
         	 + "Degree: " + degree + "\n");
     }   
-
+    @Override
     public boolean equals(Teacher teacher) {
         if (super.equals(teacher)) {
             return true;
