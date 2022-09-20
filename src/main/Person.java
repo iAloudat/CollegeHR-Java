@@ -2,7 +2,7 @@
 
 public abstract class Person {
 
-    private String firstName;
+    protected String firstName;
     private String lastName;
     private String gender;
     private int employeeID;
@@ -12,6 +12,11 @@ public abstract class Person {
     public abstract String category();
 
     public Person() {
+    	this.firstName = "";
+    	this.lastName = "";
+    	this.gender = "";
+    	this.employeeID = 0;
+    	this.age = 0;
     }
 
     public Person(String firstName, String lastName, String gender, int employeeID, int age) {
