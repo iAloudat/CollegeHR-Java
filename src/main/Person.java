@@ -7,9 +7,10 @@ public abstract class Person {
     private String gender;
     private int employeeID;
     private int age;
+    private int departmentId;
 
     //abstract method
-    public abstract String category();
+    public abstract void category();
 
     public Person() {
     	this.firstName = "";
@@ -17,14 +18,16 @@ public abstract class Person {
     	this.gender = "";
     	this.employeeID = 0;
     	this.age = 0;
+    	this.departmentId = 0;
     }
 
-    public Person(String firstName, String lastName, String gender, int employeeID, int age) {
+    public Person(String firstName, String lastName, String gender, int employeeID, int age, int departmentId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
         this.employeeID = employeeID;
         this.age = age;
+        this.departmentId = departmentId;
     }
 
     public String getfirstName() {
@@ -51,14 +54,6 @@ public abstract class Person {
         this.gender = gender;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public int getemployeeID() {
         return employeeID;
     }
@@ -66,33 +61,55 @@ public abstract class Person {
     public void setemployeeID(int employeeID) {
         this.employeeID = employeeID;
     }
+    
+    public int getAge() {
+        return age;
+    }
 
-    @Override
+    public void setAge(int age) {
+        this.age = age;
+    }
+    
+    public int getDepartmentId() {
+		return departmentId;
+	}
+
+	public void setDepartmentId(int departmentId) {
+		this.departmentId = departmentId;
+	}
+
+	@Override
     public String toString() {
 
     	return ("\nFirst Name:" + firstName + "\n"
     			+ "Last Name: " +  lastName + "\n"
     			+ "Gender: " +  gender + "\n"
     			+ "Age: " +  age + "\n"
-    			+ "Employee ID" +  employeeID + "\n");  	
+    			+ "Employee ID" +  departmentId + "\n"
+    			+ "Department ID" +  employeeID + "\n");
     }
     
-    public boolean equals(Person person) {
-    	if (!this.firstName.equals(person.firstName)) {
-    		return false;
+	@Override
+    public boolean equals(Person otherPerson) {
+    	if (this.firstName.equals(otherPerson.firstName)) {
+    		return true;
     	}
-    	if (!this.lastName.equals(person.lastName)) {
-    		return false;
+    	if (this.lastName.equals(otherPerson.lastName)) {
+    		return true;
     	}
-    	if (!this.gender.equals(person.gender)) {
-    		return false;
+    	if (this.gender.equals(otherPerson.gender)) {
+    		return true;
     	}
-        if (this.employeeID != person.employeeID) {
-            return false;
+        if (this.employeeID == otherPerson.employeeID) {
+            return true;
         }
-        if (this.age != person.age) {
-        	return false;
+        if (this.age == otherPerson.age) {
+        	return true;
+        }        
+        if (this.departmentId == otherPerson.departmentId) {
+        	return true;
         }
-        return true;
+        
+        return false;
     }
 }
