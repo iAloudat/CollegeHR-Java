@@ -47,7 +47,7 @@ public class Staff extends Person implements Payroll {
     }
 
     @Override
-    public double computePayRoll() {
+    public double ComputePayRoll() {
 
         double salary = (workload * 32 * 2) * 0.75;
 

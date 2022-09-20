@@ -21,25 +21,6 @@ public abstract class Person {
 
     public abstract String category();
 
-    public boolean equals(Person person) {
-    	if (!this.firstName.equals(person.firstName)) {
-    		return false;
-    	}
-    	if (!this.lastName.equals(person.lastName)) {
-    		return false;
-    	}
-    	if (!this.gender.equals(person.gender)) {
-    		return false;
-    	}
-        if (this.employeeID != person.employeeID) {
-            return false;
-        }
-        if (this.age != person.age) {
-        	return false;
-        }
-        return true;
-    }
-
     public String getfirstName() {
         return firstName;
     }
@@ -87,17 +68,25 @@ public abstract class Person {
     			+ "Last Name: " +  lastName + "\n"
     			+ "Gender: " +  gender + "\n"
     			+ "Age: " +  age + "\n"
-    			+ "Employee ID" +  employeeID + "\n");
-    	
-//        String str = "";
-//
-//        str += String.format("First Name: %s\n", firstName);
-//        str += String.format("Last Name: %s\n", lastName);
-//        str += String.format("Gender: %s\n", gender);
-//        str += String.format("Age: %d\n", age);
-//        str += String.format("Employee ID: %d\n", employeeID);
-//
-//        return str;
-    	
+    			+ "Employee ID" +  employeeID + "\n");  	
+    }
+    
+    public boolean equals(Person person) {
+    	if (!this.firstName.equals(person.firstName)) {
+    		return false;
+    	}
+    	if (!this.lastName.equals(person.lastName)) {
+    		return false;
+    	}
+    	if (!this.gender.equals(person.gender)) {
+    		return false;
+    	}
+        if (this.employeeID != person.employeeID) {
+            return false;
+        }
+        if (this.age != person.age) {
+        	return false;
+        }
+        return true;
     }
 }

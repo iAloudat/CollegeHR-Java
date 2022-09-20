@@ -5,7 +5,7 @@ public class PartTime extends Teacher implements Payroll {
     private int workload;
 
     public PartTime(int workload, String firstName, String lastName, String gender, int age, int employeeID, String specialty, String degree, boolean dean) {
-        super(firstName, lastName, gender, age, employeeID, specialty, degree, dean);
+        super(firstName, lastName, gender, age, employeeID, specialty, degree);
         this.workload = workload;
     }
 
@@ -24,7 +24,7 @@ public class PartTime extends Teacher implements Payroll {
     }
 
     @Override
-    public double computePayRoll() {
+    public double ComputePayRoll() {
 
         double degreeRate = 0;
 
@@ -37,29 +37,8 @@ public class PartTime extends Teacher implements Payroll {
         } else {
         	return 0;
         }
-    
-        
-//        switch (getDegree()) {
-//
-//            case "PhD":
-//                degreeRate = 112;
-//                break;
-//
-//            case "Master":
-//                degreeRate = 82;
-//                break;
-//
-//            case "Bachelor":
-//                degreeRate = 42;
-//                break;
-//
-//            default:
-//                return 0;
-//
-//        }
 
         double salary = (workload * degreeRate * 2) * 0.76;
-
         return salary;
     }
 

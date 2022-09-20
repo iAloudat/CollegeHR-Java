@@ -11,8 +11,7 @@ public class Department {
     public Department() {
     }
 
-    public Department(String departmentName, int departmentNo, ArrayList<Teacher> teachers,
-            ArrayList<Staff> staffs) {
+    public Department(String departmentName, int departmentNo, ArrayList<Teacher> teachers, ArrayList<Staff> staffs) {
         this.departmentName = departmentName;
         this.departmentNo = departmentNo;
         this.teachers = teachers;

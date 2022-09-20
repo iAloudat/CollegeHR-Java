@@ -2,6 +2,6 @@
 
 public interface Payroll {
 
-    public double computePayRoll();
+    public double ComputePayRoll();
 
 }

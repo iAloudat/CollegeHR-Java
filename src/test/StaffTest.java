@@ -75,7 +75,7 @@ public class StaffTest {
         System.out.println("ComputePayRoll");
         Staff instance = new Staff("Lloyd", "Garm", "Male", 17, 01, "janitor", 32);
         double expResult = 1536.0;
-        double result = instance.computePayRoll();
+        double result = instance.ComputePayRoll();
         assertEquals(expResult, result, 0.0);
     }
 
