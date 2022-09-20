@@ -5,11 +5,10 @@ public class Teacher extends Person {
     private String specialty;
     protected String degree;
 
-
-    public Teacher(String firstName, String lastName, String gender, int age, int employeeID, String specialty, String degree) {
-        super(firstName, lastName, gender, age, employeeID);
-        this.specialty = specialty;
-        this.degree = degree;
+    public Teacher(String firstName, String lastName, String gender, int employeeId, int age, int departmentId, String specialty, String degree) {
+    	super(firstName, lastName, gender, employeeId, age, departmentId);
+    	this.specialty = specialty;
+    	this.degree = degree;
     }
 
     public String getSpecialty() {
@@ -27,26 +26,26 @@ public class Teacher extends Person {
     
     // override to the abstract class to define the category
     @Override
-    public String category() {
-        String category = String.format("%s %s is a teacher." + super.getfirstName(), super.getlastName());
-        return category;
+    public void category() {
+        System.out.println(firstName + lastName + " is a teacher.");
     }
     
     @Override
     public String toString() {
-        return super.toString() + "Specialty: " + specialty + "\n"
-        		+ "Degree: " + degree + "\n";
+        return (super.toString() 
+             + "Specialty: " + specialty + "\n"
+        	 + "Degree: " + degree + "\n");
     }   
 
     public boolean equals(Teacher teacher) {
-        if (!super.equals(teacher)) {
-            return false;
-        } else if (!this.specialty.equals(teacher.specialty)) {
-            return false;
-        } else if (!this.degree.equals(teacher.degree)) {
-            return false;
+        if (super.equals(teacher)) {
+            return true;
+        } else if (this.specialty.equals(teacher.specialty)) {
+            return true;
+        } else if (this.degree.equals(teacher.degree)) {
+            return true;
         }
-        return true;
+        return false;
     }
 
 }
