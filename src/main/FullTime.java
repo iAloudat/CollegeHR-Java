@@ -1,21 +1,19 @@
 
-
-public class FullTime extends Teacher implements Payroll {
+public class FullTime extends Teacher {
 
     private int workload;
 
-    public FullTime(int workload, String firstName, String lastName, String gender, int age, int employeeID, String specialty, String degree, boolean dean) {
-        super(firstName, lastName, gender, age, employeeID, specialty, degree);
+    public FullTime(int workload, String firstName, String lastName, String gender, int employeeId, int age, int departmentId, String specialty, String degree) {
+        super(firstName, lastName, gender, age, employeeId, departmentId, specialty, degree);
         this.workload = workload;
     }
-
+    
     public int getWorkload() {
         return workload;
     }
-
     public void setWorkload(int workload) {
         this.workload = workload;
-    }  
+    }
     
     @Override
     public double ComputePayRoll() {
@@ -41,4 +39,3 @@ public class FullTime extends Teacher implements Payroll {
         return "FullTime{" + "workload=" + workload + '}';
     }
 }
-
