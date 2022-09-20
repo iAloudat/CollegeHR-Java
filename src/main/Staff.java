@@ -48,21 +48,14 @@ public class Staff extends Person implements Payroll {
 
     @Override
     public double ComputePayRoll() {
-
         double salary = (workload * 32 * 2) * 0.75;
-
         return salary;
     }
 
     @Override
-    public String toString() {
-        String str = "";
-
-        str += super.toString();
-        str += String.format("Duty: %s\n", duty);
-        str += String.format("Workload: %d\n", workload);
-
-        return str;
+    public String toString() {    
+    	return super.toString() + "Duty: " + duty + "\n"
+        		+ "Workload: " + workload + "\n";
     }
     
     public boolean equals(Staff staff) {

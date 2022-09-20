@@ -9,20 +9,13 @@ public class FullTime extends Teacher implements Payroll {
         this.workload = workload;
     }
 
-    @Override
-    public String toString() {
-        super.toString();
-        return "FullTime{" + "workload=" + workload + '}';
-    }
-
     public int getWorkload() {
         return workload;
     }
 
     public void setWorkload(int workload) {
         this.workload = workload;
-    }
-    
+    }  
     
     @Override
     public double ComputePayRoll() {
@@ -40,6 +33,12 @@ public class FullTime extends Teacher implements Payroll {
 
         double salary = (32 * degreeRate * 2) * 0.85;
         return salary;
+    }
+    
+    @Override
+    public String toString() {
+        super.toString();
+        return "FullTime{" + "workload=" + workload + '}';
     }
 }
 

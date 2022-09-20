@@ -9,12 +9,6 @@ public class PartTime extends Teacher implements Payroll {
         this.workload = workload;
     }
 
-    @Override
-    public String toString() {
-        super.toString();
-        return "PartTime{" + "workload=" + workload + '}';
-    }
-
     public int getWorkload() {
         return workload;
     }
@@ -25,9 +19,8 @@ public class PartTime extends Teacher implements Payroll {
 
     @Override
     public double ComputePayRoll() {
-
         double degreeRate = 0;
-
+        
         if (degree == "PHD") {
         	degreeRate = 112;
         } else if (degree == "Master") {
@@ -40,6 +33,12 @@ public class PartTime extends Teacher implements Payroll {
 
         double salary = (workload * degreeRate * 2) * 0.76;
         return salary;
+    }   
+
+    @Override
+    public String toString() {
+        super.toString();
+        return "PartTime{" + "workload=" + workload + '}';
     }
 
 }
