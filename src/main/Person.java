@@ -3,11 +3,11 @@
 public abstract class Person {
 
     protected String firstName;
-    private String lastName;
-    private String gender;
-    private int employeeID;
-    private int age;
-    private int departmentId;
+    protected String lastName;
+    protected String gender;
+    protected int employeeID;
+    protected int age;
+    protected int departmentId;
 
     //abstract method
     public abstract void category();

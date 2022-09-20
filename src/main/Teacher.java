@@ -25,11 +25,10 @@ public class Teacher extends Person {
         this.degree = degree;
     }
     
-    
     // override to the abstract class to define the category
     @Override
     public String category() {
-        String category = String.format("%s %s is a teacher.", super.getfirstName(), super.getlastName());
+        String category = String.format("%s %s is a teacher." + super.getfirstName(), super.getlastName());
         return category;
     }
     
