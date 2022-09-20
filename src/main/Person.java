@@ -8,6 +8,9 @@ public abstract class Person {
     private int employeeID;
     private int age;
 
+    //abstract method
+    public abstract String category();
+
     public Person() {
     }
 
@@ -18,8 +21,6 @@ public abstract class Person {
         this.employeeID = employeeID;
         this.age = age;
     }
-
-    public abstract String category();
 
     public String getfirstName() {
         return firstName;
