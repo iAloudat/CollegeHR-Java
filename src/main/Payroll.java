@@ -1,7 +1,6 @@
 
-
-public interface Payroll {
-
-    public double ComputePayRoll();
-
+public interface PayRoll {
+	
+	public double ComputePayRoll();
+	
 }

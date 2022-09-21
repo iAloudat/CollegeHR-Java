@@ -1,123 +1,151 @@
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Department {
+	private String name;
+	private int departmentId;
+	//private ArrayList<Teacher> teachersList = new ArrayList<Teacher>( );
+	private ArrayList<Teacher> teachersList = new ArrayList<Teacher>( );
+	private ArrayList<Staff> staffList = new ArrayList<Staff>( );
+	private Teacher dean;
+	
+	public Department() {
+		this.name = "";
+		this.departmentId = 0;
+		//this.employees = ;
+		//this.dean = ;	
+	}
+	
+	public Department(String name, int departmentId) {
+		this.name = name;
+		this.departmentId = departmentId;
+	}
 
-    private String departmentName;
-    private int departmentNo;
-    private ArrayList<Teacher> teachers;
-    private ArrayList<Staff> staffs;
+	public Department(String name, int departmentId, ArrayList<Teacher> teachersList, ArrayList<Staff> staffList,
+			Teacher dean) {
+		this.name = name;
+		this.departmentId = departmentId;
+		this.teachersList = teachersList;
+		this.staffList = staffList;
+		this.dean = dean;
+	}
+	
+	public String getName() {
+		return name;
+	}
 
-    public Department() {
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public Department(String departmentName, int departmentNo, ArrayList<Teacher> teachers, ArrayList<Staff> staffs) {
-        this.departmentName = departmentName;
-        this.departmentNo = departmentNo;
-        this.teachers = teachers;
-        this.staffs = staffs;
-    }
+	public int getDepartmentId() {
+		return departmentId;
+	}
 
-    public String getdepartmentName() {
-        return departmentName;
-    }
+	public void setDepartmentId(int departmentId) {
+		this.departmentId = departmentId;
+	}
 
-    public void setdepartmentName(String departmentName) {
-        this.departmentName = departmentName;
-    }
+	public ArrayList<Teacher> getTeachersList() {
+		return teachersList;
+	}
 
-    public int getdepartmentNo() {
-        return departmentNo;
-    }
+	public void setTeachersList(ArrayList<Teacher> teachersList) {
+		this.teachersList = teachersList;
+	}
 
-    public void setdepartmentNo(int departmentNo) {
-        this.departmentNo = departmentNo;
-    }
+	public ArrayList<Staff> getStaffList() {
+		return staffList;
+	}
 
-    public ArrayList<Teacher> getTeachers() {
-        return teachers;
-    }
+	public void setStaffList(ArrayList<Staff> staffList) {
+		this.staffList = staffList;
+	}
 
-    public void setTeachers(ArrayList<Teacher> teachers) {
-        this.teachers = teachers;
-    }
+	public Teacher getDean() {
+		return dean;
+	}
 
-    public ArrayList<Staff> getStaffs() {
-        return staffs;
-    }
+	public void setDean(Teacher dean) {
+		this.dean = dean;
+	}
 
-    public void setStaffs(ArrayList<Staff> staffs) {
-        this.staffs = staffs;
-    }
-    
-    
-    // add teacher, remove teacher / add staff remove staff
-    public void addTeacher(Teacher teacher) {
-        for (Teacher t : teachers) {
-            if (t == teacher) {
-                throw new InvalidEmployeeID("Employee is already in the department");
-            }
-        }
-        teachers.add(teacher);
-    }
+	@Override
+	public int hashCode() {
+		return Objects.hash(dean, departmentId, name, staffList, teachersList);
+	}
 
-    public void removeTeacher(Teacher teacher) {
-        teachers.remove(teacher);
-    }
-    public void addStaff(Staff staff) {
-        for (Staff s : staffs) {
-            if (s == staff) {
-                throw new InvalidEmployeeID("Employee is already in the department");
-            }
-        }
-        staffs.add(staff);
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Department other = (Department) obj;
+		return Objects.equals(dean, other.dean) && departmentId == other.departmentId
+				&& Objects.equals(name, other.name) && Objects.equals(staffList, other.staffList)
+				&& Objects.equals(teachersList, other.teachersList);
+	}
 
-    public void removeStaff(Staff staff) {
-        staffs.remove(staff);
-    }
-    
-    
-    @Override
-    public String toString() {
-        String str = "";
-
-        str += String.format("Department Name: %s\n", departmentName);
-        str += String.format("\n");
-        str += String.format("Department Number: %d\n", departmentNo);
-        str += String.format("\n");
-        str += String.format("List of Department Staffs: \n");
-        for (Staff staff : staffs) {
-            str += String.format("" + staff);
-            str += String.format("\n");
-        }
-        str += String.format("\n");
-        str += String.format("List of Department Teachers: \n");
-        for (Teacher teacher : teachers) {
-            str += String.format("" + teacher);
-            str += String.format("\n");
-        }
-        return str;
-    }
-
-    public boolean equals(Department department) {
-
-        if (!this.departmentName.equals(department.departmentName)) {
-            return false;
-        }
-
-        if (this.departmentNo != department.departmentNo) {
-            return false;
-        }
-
-        if (!this.teachers.equals(department.teachers)) {
-            return false;
-        }
-
-        if (!this.staffs.equals(department.staffs)) {
-            return false;
-        }
-
-        return true;
-    }
+	@Override
+	public String toString() {
+		return "Department [name=" + name + ", departmentId=" + departmentId + ", teachersList=" + teachersList
+				+ ", staffList=" + staffList + ", dean=" + dean + "]";
+	}
+	
+	public void aad_to_teacherList(Teacher teacher_object) {
+		int teacherId=teacher_object.employeeId;
+		
+		if(teachersList.isEmpty()) {
+			teachersList.add(teacher_object);
+		}
+		
+		else {
+			Boolean id_check = false;
+			for(int i=0;i<teachersList.size();i++) {
+				if(teachersList.get(i).getEmployeeId()==teacherId) {
+					id_check = true;
+					break;
+				}
+			}
+			if (!id_check) {
+				teachersList.add(teacher_object);
+			}
+			
+			else { 
+				System.out.println("teacherId already exists"); 
+			}
+		}
+		
+	}
+	
+	public void aad_to_staffList(Staff staff_object) {
+		int staffId=staff_object.employeeId;
+		
+		if(staffList.isEmpty()) {
+			staffList.add(staff_object);
+		}
+		
+		else {
+			Boolean id_check = false;
+			for(int i=0;i<staffList.size();i++) {
+				if(staffList.get(i).getEmployeeId()==staffId) {
+					id_check = true;
+					break;
+				}
+			}
+			if (!id_check) {
+				staffList.add(staff_object);
+			}
+			
+			else { 
+				System.out.println("staffId already exists"); 
+			}
+		}
+		
+	}
+	
 }

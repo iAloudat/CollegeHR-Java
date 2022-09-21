@@ -1,44 +1,69 @@
 
-public class PartTime extends Teacher implements Payroll {
+import java.util.Objects;
 
-    private int workload;
+public class PartTime extends Teacher implements PayRoll {
+	private int hoursWorked;
+	
+	public PartTime() {
+		super();
+		this.hoursWorked = 0;
+	}
 
-    public PartTime(int workload, String firstName, String lastName, String gender, int employeeId, int age, int departmentId, String specialty, String degree) {
-        super(firstName, lastName, gender, age, employeeId, departmentId, specialty, degree);
-        this.workload = workload;
-    }
+	public PartTime(String firstName, String lastName, int employeeId, int age, int phone, int departmentId, String specialty, String degree, int hoursWorked) {
+		super(firstName, lastName, employeeId, age, phone, departmentId, specialty, degree);
+		this.hoursWorked = hoursWorked;
+	}
+	
+	public int getHoursWorked() {
+		return hoursWorked;
+	}
 
-    public int getWorkload() {
-        return workload;
-    }
-    public void setWorkload(int workload) {
-        this.workload = workload;
-    }
-    
-    @Override
-    public String toString() {
-        super.toString();
-        return "PartTime {" + "Workload =" + workload + '}';
-    }
+	public void setHoursWorked(int hoursWorked) {
+		this.hoursWorked = hoursWorked;
+	}
 
-    @Override
-    public double ComputePayRoll() {
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + Objects.hash(hoursWorked);
+		return result;
+	}
 
-        double degreeRate = 0;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		PartTime other = (PartTime) obj;
+		return hoursWorked == other.hoursWorked;
+	}
 
-        if (degree == "PHD") {
-        	degreeRate = 112;
-        } else if (degree == "Master") {
-        	degreeRate = 82;
-        } else if (degree == "Bachelor") {
-        	degreeRate = 42;
-        } else {
-        	return 0;
-        }
+	@Override
+	public String toString() {
+		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", employeeId=" + employeeId + ", age="
+				+ age + ", phone=" + phone + ", Teacher [specialty=" + specialty + ", degree=" + degree + ", PartTime [hoursWorked=" + hoursWorked + "]]]";
+	}
 
-        double salary = (workload * degreeRate * 2) * 0.76;
+	@Override
+	public double ComputePayRoll() {
+		int degreeRate = 0;
+		if(degree.equals("Phd"))
+			degreeRate=112;
+		if(degree.equals("Master"))
+			degreeRate=82;
+		if(degree.equals("Bachelor"))
+			degreeRate=42;
+		return (hoursWorked * degreeRate * 2) * 0.76;
+	}
 
-        return salary;
-    }
+	@Override
+	public String teacher_status() {
+		// TODO Auto-generated method stub
+		return "partTime";
+	}
 
 }
