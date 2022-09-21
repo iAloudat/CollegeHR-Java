@@ -1,5 +1,5 @@
 
-public interface Payroll {
+public interface PayRoll {
 	
 	public double ComputePayRoll();
 	
