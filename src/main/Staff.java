@@ -70,8 +70,8 @@ public class Staff extends Person implements PayRoll {
 				+ age + ", phone=" + phone + ", Staff [duty=" + duty + ", workLoad=" + workLoad + "]]";
 	}
 
-	public void EmployeeCategory() {
-		System.out.print("Staff");
+	public String EmployeeCategory() {
+		return "Staff";
 	}	
 	
 	@Override

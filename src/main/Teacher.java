@@ -73,8 +73,8 @@ public abstract class Teacher extends Person{
 	}
 
 	
-	public void EmployeeCategory() {
-			System.out.print("Teacher");
+	public String EmployeeCategory() {
+			return "Teacher";
 		}
 	
 	abstract public String teacher_status();

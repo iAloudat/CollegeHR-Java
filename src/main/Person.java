@@ -125,5 +125,5 @@ abstract public class Person {
 				+ age + ", phone=" + phone + "]";
 	}
 
-	abstract public void EmployeeCategory();
+	abstract public String EmployeeCategory();
 }
