@@ -88,7 +88,7 @@ public class Main {
 			Enumeration enu_3 = department_dict.keys();
 			while (enu_3.hasMoreElements()) {
 				int idd = (Integer) enu_3.nextElement();
-				System.out.println(idd);
+				//System.out.println(idd);
 				Department dep = department_dict.get(idd);
 				ArrayList<Teacher> teachers = dep.getTeachersList();
 				ArrayList<Staff> staffs = dep.getStaffList();
@@ -170,7 +170,7 @@ public class Main {
 		}
 
 		if (!dep_check) {
-			System.out.println("Departme does not exist.");
+			System.out.println("Departme ID : " + dep_id_1 + " Departme does not exist.");
 			// System.out.println(dep_id_1);
 			return;
 		}
@@ -180,7 +180,7 @@ public class Main {
 		Boolean id_check = false;
 		for (Integer t : employee_ids) {
 			if (t == emp_id) {
-				System.out.println("Employee already exists.");
+				System.out.println("Employee ID : " + emp_id + " Already exists.");
 				id_check = true;
 				// break;
 				return;

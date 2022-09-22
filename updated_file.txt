@@ -3,6 +3,6 @@ fullTime,Siroos,Rahimi,2,23,4387654,hammal,phd,5
 fullTime,Siroos,Rahimi,13,23,4387654,hammal,phd,5
 partTime,Siroos,Rahimi,14,23,4387654,hammal,electicien,30,5
 staff,Siroos,Rahimi,5,23,4387654,electicien,30,4
-fullTime,Siroos,Rahimi,4,23,4387654,hammal,phd,3
 staff,Siroos,Rahimi,3,23,4387654,emechanicien,20,2
-partTime,Siroos,Rahimi,1,23,4387654,hammal,phd,40,2
+partTime,Siroos,Rahimi,1,23,87652350,hammal,phd,40,2
+fullTime,Siroos,Rahimi,4,23,4387654,hammal,phd,1
