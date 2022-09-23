@@ -71,8 +71,9 @@ public class Main {
 		Enumeration enu_1 = department_dict.keys();
 		while (enu_1.hasMoreElements()) {
 			int idd = (Integer) enu_1.nextElement();
-			System.out.print(idd);
-			System.out.print(": ");
+			
+			System.out.println("******");
+			System.out.print("Department : "+idd+ " ");
 			System.out.println(department_dict.get(idd).getName());
 			System.out.println(department_dict.get(idd).getTeachersList());
 			System.out.println(department_dict.get(idd).getStaffList());
@@ -80,15 +81,15 @@ public class Main {
 
 ////////////////////////////////////////////////////////////////////////       
 
-		String line_1 = "staff,Soroosh,Rahimi,20,23,4387654,hammal,20,5";
+		String line_1 = "staff,Tamiko,Henriquet,297465,23,728383184,Chemical Engineer,20,5";
 		addPerson(line_1, department_ids, employee_ids, department_dict);
 
 		try {
 			FileWriter writer = new FileWriter("updated_file.txt", false);
 			Enumeration enu_3 = department_dict.keys();
 			while (enu_3.hasMoreElements()) {
-				int idd = (Integer) enu_3.nextElement();
-				//System.out.println(idd);
+				int idd = (Integer) enu_3.nextElement();		
+				
 				Department dep = department_dict.get(idd);
 				ArrayList<Teacher> teachers = dep.getTeachersList();
 				ArrayList<Staff> staffs = dep.getStaffList();
@@ -142,8 +143,8 @@ public class Main {
 		Enumeration enu_2 = department_dict.keys();
 		while (enu_2.hasMoreElements()) {
 			int idd = (Integer) enu_2.nextElement();
-			System.out.print(idd);
-			System.out.print(": ");
+			System.out.println("******");
+			System.out.print("Department : "+idd+ " ");
 			System.out.println(department_dict.get(idd).getName());
 			System.out.println(department_dict.get(idd).getTeachersList());
 			System.out.println(department_dict.get(idd).getStaffList());
@@ -170,7 +171,7 @@ public class Main {
 		}
 
 		if (!dep_check) {
-			System.out.println("Departme ID : " + dep_id_1 + " Departme does not exist.");
+			System.out.println("ID : " + dep_id_1 + " Departme does not exist.");
 			// System.out.println(dep_id_1);
 			return;
 		}
@@ -180,7 +181,7 @@ public class Main {
 		Boolean id_check = false;
 		for (Integer t : employee_ids) {
 			if (t == emp_id) {
-				System.out.println("Employee ID : " + emp_id + " Already exists.");
+				System.out.println("ID : " + emp_id + " Already exists.");
 				id_check = true;
 				// break;
 				return;
