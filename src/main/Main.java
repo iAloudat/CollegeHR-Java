@@ -51,7 +51,7 @@ public class Main {
 		try {
 			// reading the text file line by line --> creating line_1_split array based on
 			// "," for each line
-			File myObj = new File("Text1.txt");
+			File myObj = new File("File.txt");
 			Scanner myReader = new Scanner(myObj);
 			while (myReader.hasNextLine()) {
 				String data = myReader.nextLine();
@@ -85,7 +85,7 @@ public class Main {
 		addPerson(line_1, department_ids, employee_ids, department_dict);
 
 		try {
-			FileWriter writer = new FileWriter("updated_file.txt", false);
+			FileWriter writer = new FileWriter("File_Update.txt", false);
 			Enumeration enu_3 = department_dict.keys();
 			while (enu_3.hasMoreElements()) {
 				int idd = (Integer) enu_3.nextElement();		
