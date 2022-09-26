@@ -1,0 +1,11 @@
+staff,Rosemary,Hickinbottom,228407,27,639209311,Database Administrator II,40,5
+staff,Tamiko,Henriquet,297465,23,728383184,Chemical Engineer,20,5
+partTime,Murial,Blitzer,486378,26,258111719,Information Systems Manager,Master,40,5
+staff,Donica,Nund,216951,30,218732911,Professor,20,4
+partTime,Daron,Rein,440073,57,241812606,Tax Accountant,PHD,30,4
+staff,Wilhelmine,Wherrett,643151,29,194685063,Safety Technician I,40,3
+partTime,Romola,Gabbat,614066,33,380855521,Junior Executive,PHD,40,3
+staff,Markus,Hendrich,444419,42,450847983,Office Assistant II,40,2
+fullTime,Eachelle,Draxford,90638,25,284015434,Senior Editor,Master,2
+staff,Boony,Elger,300987,51,907838902,Developer II,40,1
+fullTime,Clea,Solesbury,36930,52,899229002,Chemical Engineer,PHD,1
